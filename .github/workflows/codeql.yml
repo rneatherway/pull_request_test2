@@ -7,7 +7,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v1
-    - uses: github/codeql-action/init@v1
+    - uses: github/codeql-action/init@allow_pull_requests
     - run: make
-    - uses: github/codeql-action/analyze@v1
+    - uses: github/codeql-action/analyze@allow_pull_requests
 
