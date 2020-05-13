@@ -18,6 +18,7 @@ jobs:
     - run: git checkout HEAD^2
       if: ${{ github.event_name == 'pull_request' }}
 
+    # From here it's normal
     - uses: github/codeql-action/init@allow_pull_requests
     - run: make
     - uses: github/codeql-action/analyze@allow_pull_requests
