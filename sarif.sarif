@@ -16,7 +16,7 @@
 		"locations" : [ {
 		    "physicalLocation" : {
 			"artifactLocation" : {
-			    "uri" : "fileURI"
+			    "uri" : "sarif.sarif"
 			},
 			"region" : {
 			    "startLine" : 2,
