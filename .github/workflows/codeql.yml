@@ -19,6 +19,6 @@ jobs:
       if: ${{ github.event_name == 'pull_request' }}
 
     - run: sed "s/_TIME_/$(date --rfc-3339=seconds)/g" sarif.sarif > result.sarif
-    - uses: github/codeql-action/upload-sarif@master
+    - uses: github/codeql-action/upload-sarif@allow_pull_requests
       with:
         sarif_file: result.sarif
