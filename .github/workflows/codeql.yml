@@ -1,6 +1,6 @@
 name: "CodeQL action"
 
-on: [pull_request, push]
+on: [pull_request]
 
 jobs:
   build:
@@ -18,7 +18,7 @@ jobs:
     - run: git checkout HEAD^2
       if: ${{ github.event_name == 'pull_request' }}
 
-    # From here it's normal
-    - uses: github/codeql-action/init@allow_pull_requests
-    - run: make
-    - uses: github/codeql-action/analyze@allow_pull_requests
+    - run: sed "s/_TIME_/$(date --rfc-3339=seconds)/g" sarif.sarif > result.sarif
+    - uses: github/codeql-action/upload-sarif@master
+      with:
+        sarif_file: result.sarif
