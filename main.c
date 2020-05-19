@@ -1,7 +1,7 @@
 #include <stdio.h>
 int main(int argc, char **argv) {
-        char *copy;
-        copy = (char *)malloc(strlen(argv[0]));
-        strcpy(copy, argv[0]);
-        return copy;
+        char *copy2;
+        copy2 = (char *)malloc(strlen(argv[0]));
+        strcpy(copy2, argv[0]);
+        return copy2;
 }
