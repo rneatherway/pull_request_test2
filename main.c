@@ -5,3 +5,4 @@ int main(int argc, char **argv) {
         strcpy(copy2, argv[0]);
         return copy2;
 }
+// Trigger analysis
